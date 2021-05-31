@@ -1,15 +1,21 @@
-import {Container} from "@material-ui/core"
-import Navbar from "./components/Navbar/Navbar"
-import './App.css';
+import Navbar from "./components/Navbar";
+import Container from "@material-ui/core/Container";
+import "./App.css";
+
+import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <Container fixed >
-      <h1>Hello, from Score renovations</h1>
-      </Container>
-    </div>
+      <About />
+      <Portfolio />
+      <Contact />
+      <Footer />
+    </>
   );
 }
 
