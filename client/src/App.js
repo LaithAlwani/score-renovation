@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar";
-import Container from "@material-ui/core/Container";
 import "./App.css";
 
 import About from "./components/About";

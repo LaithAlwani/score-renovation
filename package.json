@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/LaithAlwani/react-template#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
   },
   "devDependencies": {
-    "concurrently": "^6.1.0",
-    "if-env": "^1.0.4"
+    "concurrently": "^6.1.0"
   }
 }
