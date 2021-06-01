@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core";
+import Alert from "@material-ui/lab/Alert";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    
-  },
-  form:{
-    width:"50%",
-    heigh:"100%",
-    margin:" 4rem auto",
-    [theme.breakpoints.down("sm")]:{
-      width:"95%",
-      
-    }
+  root: {},
+  form: {
+    width: "50%",
+    heigh: "100%",
+    margin: " 4rem auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "95%",
+    },
   },
   field: {
-    marginTop: 20,
-    marginBottom: 20,
+    marginTop: 15,
+    marginBottom: 15,
   },
 }));
 
@@ -33,81 +31,94 @@ function Contact() {
   const [titleError, setTitleError] = useState(false);
   const [messageError, setMessageError] = useState(false);
 
-  const handleSubmit = e =>{
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setNameError(false);
     setEmailError(false);
     setTitleError(false);
     setMessageError(false);
 
-    if(!name){
+    if (!name) {
       setNameError(true);
-    }
-    else if(!email){
+    } else if (!email) {
       setEmailError(true);
-    }
-    else if(!title){
+    } else if (!title) {
       setTitleError(true);
-    }
-    else if(!message){
+    } else if (!message) {
       setMessageError(true);
+    } else {
+      setSuccess("Request Set");
+      setName("");
+      setEmail("");
+      setTitle("");
+      setMessage("");
+      setTimeout(() => {
+        setSuccess("");
+      }, 3000);
     }
-    else{
-      console.log(`name ${name}
-      email: ${email}
-      title: ${title}
-      message: ${message}`)
-    }
+  };
 
-  }
+  useEffect(() => {});
 
-  useEffect(()=>{
-    
-  })
-  
   return (
     <div className={classes.root} id="contact">
       Contact us:
-      <form noValidate autoComplete="off" className={classes.form} onSubmit={handleSubmit}>
+      <form
+        noValidate
+        autoComplete="off"
+        className={classes.form}
+        onSubmit={handleSubmit}
+        >
+        {error && <Alert severity="error">{error}</Alert>}
+        {success && <Alert severity="success">{success}</Alert>}
         <TextField
-        onChange={e => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
           className={classes.field}
           label="Name"
           variant="outlined"
+          value={name}
           fullWidth
           required
           error={nameError}
         />
         <TextField
-        onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           className={classes.field}
           label="Email"
           variant="outlined"
+          value={email}
           fullWidth
           required
           error={emailError}
         />
         <TextField
-        onChange={e => setTitle(e.target.value)}
+          onChange={(e) => setTitle(e.target.value)}
           className={classes.field}
           label="Title"
           variant="outlined"
+          value={title}
           fullWidth
           required
           error={titleError}
         />
         <TextField
-        onChange={e => setMessage(e.target.value)}
+          onChange={(e) => setMessage(e.target.value)}
           className={classes.field}
           label="Message"
           variant="outlined"
+          value={message}
           multiline={true}
           rows={5}
           fullWidth
           required
           error={messageError}
         />
-        <Button type="submit" variant="contained" color="secondary" fullWidth>Submit</Button>
+        <Button type="submit" variant="contained" color="secondary" fullWidth>
+          Submit
+        </Button>
       </form>
     </div>
   );
