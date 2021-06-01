@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     
   },
@@ -11,6 +11,10 @@ const useStyles = makeStyles(() => ({
     width:"50%",
     heigh:"100%",
     margin:" 4rem auto",
+    [theme.breakpoints.down("sm")]:{
+      width:"95%",
+      
+    }
   },
   field: {
     marginTop: 20,
