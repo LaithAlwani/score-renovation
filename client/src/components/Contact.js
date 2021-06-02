@@ -8,7 +8,7 @@ import TextField from "@material-ui/core/TextField";
 const useStyles = makeStyles((theme) => ({
   root: {},
   form: {
-    width: "50%",
+    width: "95%",
     heigh: "100%",
     margin: " 4rem auto",
   },
@@ -66,7 +66,7 @@ function Contact() {
       <Box
         component="form"
         sx={{
-          "& .MuiTextField-root": { m: 1 },
+          "& .MuiTextField-root": { my: 1 },
         }}
         noValidate
         autoComplete="off"

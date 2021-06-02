@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
     bottom:10,
-    right:10
+    right:20
   },
   appbar: {
     flexGrow: 1,
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   scroll: {
     scrollBehavior: "smooth"
-  },
+  }
 }));
 
 function ScrollTop(props) {
