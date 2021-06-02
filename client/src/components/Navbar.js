@@ -2,8 +2,9 @@ import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/styles";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Box from '@material-ui/core/Box';
 import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
@@ -15,14 +16,14 @@ import { Container } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
-    bottom: theme.spacing(2),
-    right: theme.spacing(2),
+    bottom:10,
+    right:10
   },
   appbar: {
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    
   },
   buttons: {
     flexGrow: 1,
@@ -49,9 +50,9 @@ function ScrollTop(props) {
 
   return (
     <Zoom in={trigger}>
-      <div onClick={handleClick} role="presentation" className={classes.root}>
+      <Box onClick={handleClick} role="presentation" className={classes.root}>
         {children}
-      </div>
+      </Box>
     </Zoom>
   );
 }

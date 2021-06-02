@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core";
-import Alert from "@material-ui/lab/Alert";
+import { makeStyles } from "@material-ui/styles";
+import Alert from "@material-ui/core/Alert";
+import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 
@@ -10,13 +11,10 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     heigh: "100%",
     margin: " 4rem auto",
-    [theme.breakpoints.down("sm")]: {
-      width: "95%",
-    },
   },
   field: {
-    marginTop: 15,
-    marginBottom: 15,
+    marginTop: "15px",
+    marginBottom: "15px",
   },
 }));
 
@@ -65,13 +63,17 @@ function Contact() {
 
   return (
     <div className={classes.root} id="contact">
-      Contact us:
-      <form
+      <Box
+        component="form"
+        sx={{
+          "& .MuiTextField-root": { m: 1 },
+        }}
         noValidate
         autoComplete="off"
         className={classes.form}
         onSubmit={handleSubmit}
         >
+        Contact us:
         {error && <Alert severity="error">{error}</Alert>}
         {success && <Alert severity="success">{success}</Alert>}
         <TextField
@@ -119,7 +121,7 @@ function Contact() {
         <Button type="submit" variant="contained" color="secondary" fullWidth>
           Submit
         </Button>
-      </form>
+      </Box>
     </div>
   );
 }
