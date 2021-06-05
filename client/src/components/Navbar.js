@@ -4,33 +4,28 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/styles";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import Box from '@material-ui/core/Box';
+import Box from "@material-ui/core/Box";
 import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
 import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import { Container } from "@material-ui/core";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
-    bottom:10,
-    right:20
+    bottom: 10,
+    right: 20,
   },
   appbar: {
-    flexGrow: 1,
-  },
-  menuButton: {
     
   },
   buttons: {
     flexGrow: 1,
   },
   scroll: {
-    scrollBehavior: "smooth"
-  }
+    scrollBehavior: "smooth",
+  },
 }));
 
 function ScrollTop(props) {
@@ -57,22 +52,13 @@ function ScrollTop(props) {
   );
 }
 
-export default function BackToTop() {
+export default function Navbar() {
   const classes = useStyles();
   return (
-    <div className={classes.appbar}>
-      <AppBar elevation={0} position="static" color="inherit" >
-        <Container fixed>
-
+    <AppBar position="static" color="transparent" elevation={0} className={classes.appbar}>
+      {/* <Container fixed> */}
         <Toolbar id="back-to-top-anchor">
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
+         
           <Typography variant="h5" className={classes.buttons}>
             SR
           </Typography>
@@ -86,14 +72,13 @@ export default function BackToTop() {
             Contact
           </Button>
         </Toolbar>
-        </Container>
-      </AppBar>
-  
-      <ScrollTop>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollTop>
-    </div>
+
+        <ScrollTop>
+          <Fab color="secondary" size="small" aria-label="scroll back to top">
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </ScrollTop>
+      {/* </Container> */}
+    </AppBar>
   );
 }

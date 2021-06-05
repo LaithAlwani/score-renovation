@@ -2,22 +2,32 @@ import React from "react";
 import Box from "@material-ui/core/Box";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
-import { Container } from "@material-ui/core";
+import { Container, Paper } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
+
+const useStyles = makeStyles(() => ({
+  root: {
+    backgroundColor: "rgba(255, 255, 255, 0.7)",
+  },
+}));
 
 export default function Portfolio() {
+  const classes = useStyles();
   return (
-    <Box sx={{margin: "0 auto", width: "100%" }} id="portfolio">
+    <Box sx={{ margin: "0 auto" }} className={classes.root} id="portfolio">
       <Container sx={{}}>
         <ImageList variant="masonry" cols={2} gap={8}>
           {itemData.map((item) => (
-            <ImageListItem  key={item.img}>
-              <img
-                srcSet={`${item.img}?w=161&fit=crop&auto=format 1x,
+            <Paper>
+              <ImageListItem key={item.img} elevation={1}>
+                <img
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format 1x,
                 ${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-              />
-            </ImageListItem>
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            </Paper>
           ))}
         </ImageList>
       </Container>
