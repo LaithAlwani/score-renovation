@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@material-ui/core/Box";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
-import { Container, Paper } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(() => ({
@@ -18,7 +18,7 @@ export default function Portfolio() {
       <Container sx={{}}>
         <ImageList variant="masonry" cols={2} gap={8}>
           {itemData.map((item) => (
-            <Paper>
+            
               <ImageListItem key={item.img} elevation={1}>
                 <img
                   srcSet={`${item.img}?w=161&fit=crop&auto=format 1x,
@@ -27,7 +27,7 @@ export default function Portfolio() {
                   loading="lazy"
                 />
               </ImageListItem>
-            </Paper>
+            
           ))}
         </ImageList>
       </Container>

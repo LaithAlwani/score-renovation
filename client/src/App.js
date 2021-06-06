@@ -16,6 +16,7 @@ const useStyles = makeStyles(() => ({
       content: ``,
       display:"block",
       position: "absolute",
+      backgroundSize: "cover",
       top: "0",
       left: "0",
       width:"100%",
