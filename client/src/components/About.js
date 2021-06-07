@@ -18,14 +18,6 @@ const useStyles = makeStyles(() => ({
   },
   title: {
     textAlign: "center",
-    // width:"50%",
-    // "@media (max-width:768px)":{
-    //   width:"90%"
-    // },
-    // padding:"1rem",
-    // borderRadius:"0.5rem",
-    // backgroundColor:"rgba(255,255,255,0.8)",
-    // overflowWrap: "normal",
   },
   
 }));
