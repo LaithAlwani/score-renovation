@@ -19,7 +19,10 @@ const useStyles = makeStyles(() => ({
   title: {
     textAlign: "center",
   },
-  
+  text:{
+    color:"white",
+    textShadow:"2px 2px 4px black"
+  }
 }));
 
 function About() {
@@ -28,10 +31,10 @@ function About() {
     <div className={classes.root} id="about">
       <div className={classes.titleContainer}>
         <div className={classes.title}>
-          <Typography variant="h2" fontWeight="bold">
+          <Typography variant="h2" fontWeight="bold" className={classes.text}>
             Score Renovations
           </Typography>
-          <Typography variant="subtitle1" fontSize="2rem" fontWeight="bold">
+          <Typography variant="subtitle1" fontSize="2rem" fontWeight="bold" className={classes.text}>
             Renovation made easy!
           </Typography>
           {/* <Box className={classes.desc}>
