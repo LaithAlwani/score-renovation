@@ -1,40 +1,59 @@
 import React from "react";
-import { Container, CssBaseline, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import Navbar from "./Navbar";
 
 const useStyles = makeStyles(() => ({
   root: {
     minHeight: "100vh",
-    backgroundColor:"rgba(255,255,255,0.5)"
+    backgroundImage: `url(${process.env.PUBLIC_URL + "/images/Kitchen-S.jpg"})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    marginBottom: "5rem",
   },
   titleContainer: {
-    height:"100vh",
+    height: "100vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
   title: {
-    textAlign:"center"
+    textAlign: "center",
+    // width:"50%",
+    // "@media (max-width:768px)":{
+    //   width:"90%"
+    // },
+    // padding:"1rem",
+    // borderRadius:"0.5rem",
+    // backgroundColor:"rgba(255,255,255,0.8)",
+    // overflowWrap: "normal",
   },
+  
 }));
 
 function About() {
   const classes = useStyles();
   return (
-    <>
-      <Navbar />
-      <div className={classes.root} id="about">
-        <div className={classes.titleContainer}>
-          <div className={classes.title}>
-            <Typography variant="h2">Score Renovations</Typography>
-            <Typography variant="subtitle1" display="block">
-              Renovation made easy!
+    <div className={classes.root} id="about">
+      <div className={classes.titleContainer}>
+        <div className={classes.title}>
+          <Typography variant="h2" fontWeight="bold">
+            Score Renovations
+          </Typography>
+          <Typography variant="subtitle1" fontSize="2rem" fontWeight="bold">
+            Renovation made easy!
+          </Typography>
+          {/* <Box className={classes.desc}>
+            <Typography variant="subtitle1" fontWeight="bold">
+              An insured and experienced team in Ottawa, ON. specializing in
+              kitchens and bathrooms remodeling and renovations, finishing
+              basements from framing to drywall we do it all. We always
+              providing a lengthy warranty on our work. Quality work,
+              punctuality and cleanliness are always our main priority
             </Typography>
-          </div>
+          </Box> */}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

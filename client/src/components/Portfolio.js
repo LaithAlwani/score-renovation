@@ -5,29 +5,31 @@ import ImageListItem from "@material-ui/core/ImageListItem";
 import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
-const useStyles = makeStyles(() => ({
-  root: {
-    backgroundColor: "rgba(255, 255, 255, 0.7)",
-  },
-}));
+const useStyles = makeStyles(()=>({
+  root:{
+    minHeight:"100vh",
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    marginTop:"2rem"
+  }
+}))
 
 export default function Portfolio() {
   const classes = useStyles();
   return (
-    <Box sx={{ margin: "0 auto" }} className={classes.root} id="portfolio">
+    <Box sx={{ margin: "0 auto" }} id="portfolio" className={classes.root}>
       <Container sx={{}}>
         <ImageList variant="masonry" cols={2} gap={8}>
           {itemData.map((item) => (
-            
-              <ImageListItem key={item.img} elevation={1}>
-                <img
-                  srcSet={`${item.img}?w=161&fit=crop&auto=format 1x,
+            <ImageListItem key={item.img} elevation={1}>
+              <img
+                srcSet={`${item.img}?w=161&fit=crop&auto=format 1x,
                 ${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                />
-              </ImageListItem>
-            
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
           ))}
         </ImageList>
       </Container>

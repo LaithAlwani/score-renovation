@@ -8,23 +8,23 @@ import Footer from "./components/Footer";
 
 const useStyles = makeStyles(() => ({
   root: {
-    minHeight: "100vh",
-    position:"relative",
-    backgroundImage: `url(${process.env.PUBLIC_URL + "/images/Kitchen-S.JPG"})`,
+    // minHeight: "100vh",
+    // position:"relative",
+    // backgroundImage: `url(${process.env.PUBLIC_URL + "/images/Kitchen-S.JPG"})`,
     
-    '&::before':{
-      content: ``,
-      display:"block",
-      position: "absolute",
-      backgroundSize: "cover",
-      top: "0",
-      left: "0",
-      width:"100%",
-      height:"100%",
-      zIndex:1,
-      opacity: "0.5",
+    // '&::before':{
+    //   content: ``,
+    //   display:"block",
+    //   position: "absolute",
+    //   backgroundSize: "cover",
+    //   top: "0",
+    //   left: "0",
+    //   width:"100%",
+    //   height:"100%",
+    //   zIndex:1,
+    //   opacity: "0.5",
       
-    },
+    // },
   },
   
 }));
@@ -33,7 +33,7 @@ function App() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      {/* <Navbar /> */}
+      <Navbar />
       <About />
       <Portfolio />
       <Contact />

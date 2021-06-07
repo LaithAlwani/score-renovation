@@ -4,24 +4,16 @@ import Alert from "@material-ui/core/Alert";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import { Card } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    backgroundColor:"rgba(255,255,255 ,0.5) !important",
-    width:"60%",
-    padding:"1rem 2rem",
-    margin:"0 auto"
-  },
-  form: {
-    width: "100%",
-    heigh: "100%",
-    margin: " 4rem auto",
-  },
-  field: {
-    marginTop: "15px",
-    marginBottom: "15px",
-  },
+    minHeight:"100vh",
+    display:"flex",
+    justifyContent: "center",
+    alignItems:"center",
+    padding:"0.25rem"
+  }
 }));
 
 function Contact() {
@@ -68,69 +60,63 @@ function Contact() {
   useEffect(() => {});
 
   return (
-   
-      <Card className={classes.root} id="contact">
-        <Box
-          component="form"
-          sx={{
-            "& .MuiTextField-root": { my: 1 },
-          }}
-          noValidate
-          autoComplete="off"
-          className={classes.form}
-          onSubmit={handleSubmit}
-        >
-          Contact us:
-          {error && <Alert severity="error">{error}</Alert>}
-          {success && <Alert severity="success">{success}</Alert>}
-          <TextField
-            onChange={(e) => setName(e.target.value)}
-            className={classes.field}
-            label="Name"
-            variant="outlined"
-            value={name}
-            fullWidth
-            required
-            error={nameError}
-          />
-          <TextField
-            onChange={(e) => setEmail(e.target.value)}
-            className={classes.field}
-            label="Email"
-            variant="outlined"
-            value={email}
-            fullWidth
-            required
-            error={emailError}
-          />
-          <TextField
-            onChange={(e) => setTitle(e.target.value)}
-            className={classes.field}
-            label="Title"
-            variant="outlined"
-            value={title}
-            fullWidth
-            required
-            error={titleError}
-          />
-          <TextField
-            onChange={(e) => setMessage(e.target.value)}
-            className={classes.field}
-            label="Message"
-            variant="outlined"
-            value={message}
-            multiline={true}
-            rows={5}
-            fullWidth
-            required
-            error={messageError}
-          />
-          <Button type="submit" variant="contained" color="secondary" fullWidth>
-            Submit
-          </Button>
-        </Box>
-      </Card>
-    
+    <div className={classes.root} id="contact">
+      <Box
+        component="form"
+        sx={{
+          "& .MuiTextField-root": { my: 1 },
+        }}
+        noValidate
+        autoComplete="off"
+        onSubmit={handleSubmit}
+      >
+        <Typography variant="h4">Contact us:</Typography> 
+        {error && <Alert severity="error">{error}</Alert>}
+        {success && <Alert severity="success">{success}</Alert>}
+        <TextField
+          onChange={(e) => setName(e.target.value)}
+          label="Name"
+          variant="outlined"
+          value={name}
+          fullWidth
+          required
+          error={nameError}
+        />
+        <TextField
+          onChange={(e) => setEmail(e.target.value)}
+          label="Email"
+          variant="outlined"
+          value={email}
+          fullWidth
+          required
+          error={emailError}
+        />
+        <TextField
+          onChange={(e) => setTitle(e.target.value)}
+          label="Title"
+          variant="outlined"
+          value={title}
+          fullWidth
+          required
+          error={titleError}
+        />
+        <TextField
+          onChange={(e) => setMessage(e.target.value)}
+          className={classes.field}
+          label="Message"
+          variant="outlined"
+          value={message}
+          multiline={true}
+          rows={5}
+          fullWidth
+          required
+          error={messageError}
+        />
+        <Button type="submit" variant="contained" color="secondary" fullWidth>
+          Submit
+        </Button>
+      </Box>
+    </div>
   );
 }
 
