@@ -5,15 +5,20 @@ import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { Typography } from "@material-ui/core";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 
 const useStyles = makeStyles(() => ({
   root: {
-    minHeight:"100vh",
-    display:"flex",
+    minHeight: "100vh",
+    display: "flex",
     justifyContent: "center",
-    alignItems:"center",
-    padding:"0.25rem"
-  }
+    alignItems: "center",
+    padding: "0.25rem",
+    position: "relative",
+  },
+  whatsaap: {
+    color: "green",
+  },
 }));
 
 function Contact() {
@@ -70,7 +75,11 @@ function Contact() {
         autoComplete="off"
         onSubmit={handleSubmit}
       >
-        <Typography variant="h4">Contact us:</Typography> 
+        <Typography variant="h4">Contact us:</Typography>
+        <a href="https://wa.me/+16139817682" target="_blank" rel="noreferrer">
+          <WhatsAppIcon className={classes.whatsaap} />
+        </a>
+        Email:​info@scorerenovation.com
         {error && <Alert severity="error">{error}</Alert>}
         {success && <Alert severity="success">{success}</Alert>}
         <TextField
