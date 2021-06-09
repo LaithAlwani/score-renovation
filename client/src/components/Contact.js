@@ -7,6 +7,8 @@ import TextField from "@material-ui/core/TextField";
 import { Typography } from "@material-ui/core";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 
+import emailjs from "emailjs-com";
+
 const useStyles = makeStyles(() => ({
   root: {
     minHeight: "100vh",
@@ -23,13 +25,9 @@ const useStyles = makeStyles(() => ({
 
 function Contact() {
   const classes = useStyles();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [title, setTitle] = useState("");
-  const [message, setMessage] = useState("");
   const [nameError, setNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
-  const [titleError, setTitleError] = useState(false);
+  const [subjectError, setSubjectError] = useState(false);
   const [messageError, setMessageError] = useState(false);
 
   const [success, setSuccess] = useState("");
@@ -39,26 +37,54 @@ function Contact() {
     e.preventDefault();
     setNameError(false);
     setEmailError(false);
-    setTitleError(false);
+    setSubjectError(false);
     setMessageError(false);
 
-    if (!name) {
-      setNameError(true);
-    } else if (!email) {
-      setEmailError(true);
-    } else if (!title) {
-      setTitleError(true);
-    } else if (!message) {
-      setMessageError(true);
+    if (
+      e.target.name.value &&
+      e.target.email.value &&
+      e.target.subject.value &&
+      e.target.message.value
+    ) {
+      console.log("Success");
+      emailjs
+        .sendForm(
+          "service_25vrwg9",
+          "template_9eqd1ek",
+          e.target,
+          "user_7j0TOSmTP49f6sVZrw2Li"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setSuccess("Request Set");
+            setTimeout(() => {
+              setSuccess("");
+            }, 3000);
+          },
+          (error) => {
+            console.log(error.text);
+            setError("Request Failed");
+            setTimeout(() => {
+              setError("");
+            }, 3000);
+          }
+        );
+
+      e.target.reset();
     } else {
-      setSuccess("Request Set");
-      setName("");
-      setEmail("");
-      setTitle("");
-      setMessage("");
-      setTimeout(() => {
-        setSuccess("");
-      }, 3000);
+      if (!e.target.name.value) {
+        setNameError(true);
+      }
+      if (!e.target.email.value) {
+        setEmailError(true);
+      }
+      if (!e.target.subject.value) {
+        setSubjectError(true);
+      }
+      if (!e.target.message.value) {
+        setMessageError(true);
+      }
     }
   };
 
@@ -83,38 +109,38 @@ function Contact() {
         {error && <Alert severity="error">{error}</Alert>}
         {success && <Alert severity="success">{success}</Alert>}
         <TextField
-          onChange={(e) => setName(e.target.value)}
+          // onChange={(e) => setName(e.target.value)}
           label="Name"
+          name="name"
           variant="outlined"
-          value={name}
           fullWidth
           required
           error={nameError}
         />
         <TextField
-          onChange={(e) => setEmail(e.target.value)}
+          // onChange={(e) => setEmail(e.target.value)}
           label="Email"
+          name="email"
           variant="outlined"
-          value={email}
           fullWidth
           required
           error={emailError}
         />
         <TextField
-          onChange={(e) => setTitle(e.target.value)}
-          label="Title"
+          // onChange={(e) => setTitle(e.target.value)}
+          label="Subject"
+          name="subject"
           variant="outlined"
-          value={title}
           fullWidth
           required
-          error={titleError}
+          error={subjectError}
         />
         <TextField
-          onChange={(e) => setMessage(e.target.value)}
+          // onChange={(e) => setMessage(e.target.value)}
           className={classes.field}
           label="Message"
+          name="message"
           variant="outlined"
-          value={message}
           multiline={true}
           rows={5}
           fullWidth

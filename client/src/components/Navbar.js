@@ -10,14 +10,15 @@ import { makeStyles } from "@material-ui/styles";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
-  // root: {
-  //   position: "fixed",
-  //   bottom: 10,
-  //   right: 20,
-  // },
   root: {
     backgroundColor:"rgba(255,255,255,0.5) !important",
     color:"black !important",
+  },
+  toolbar:{
+    "@media (min-width:768px)":{
+      width:"70%",
+      margin:"0 auto"
+    }
   },
   image: {
     width: "50px",
@@ -26,30 +27,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow:1
   }
 }));
-
-// function ScrollTop(props) {
-//   const { children } = props;
-//   const classes = useStyles();
-//   const trigger = useScrollTrigger();
-
-//   const handleClick = (event) => {
-//     const anchor = (event.target.ownerDocument || document).querySelector(
-//       "#back-to-top-anchor"
-//     );
-
-//     if (anchor) {
-//       anchor.scrollIntoView({ behavior: "smooth", block: "center" });
-//     }
-//   };
-
-//   return (
-//     <Zoom in={trigger}>
-//       <Box onClick={handleClick} role="presentation" className={classes.root}>
-//         {children}
-//       </Box>
-//     </Zoom>
-//   );
-// }
 
 export default function Navbar() {
   const classes = useStyles();
@@ -60,7 +37,7 @@ export default function Navbar() {
       className={classes.root}
     >
       {/* <Container fixed> */}
-      <Toolbar id="back-to-top-anchor">
+      <Toolbar id="back-to-top-anchor" className={classes.toolbar}>
         <Box className={classes.buttons}>
           <img
             src={

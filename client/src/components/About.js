@@ -1,5 +1,6 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import Box  from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(() => ({
@@ -8,13 +9,13 @@ const useStyles = makeStyles(() => ({
     backgroundImage: `url(${process.env.PUBLIC_URL + "/images/Kitchen-S.jpg"})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    marginBottom: "5rem",
+    marginBottom: "5rem"
   },
   titleContainer: {
     height: "100vh",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "center"
   },
   title: {
     textAlign: "center",
@@ -22,6 +23,12 @@ const useStyles = makeStyles(() => ({
   text:{
     color:"white",
     textShadow:"2px 2px 4px black"
+  },
+  desc:{
+    "@media (min-width:768px)":{
+      width:"100%",
+      margin:"0 auto"
+    }
   }
 }));
 
@@ -31,21 +38,21 @@ function About() {
     <div className={classes.root} id="about">
       <div className={classes.titleContainer}>
         <div className={classes.title}>
-          <Typography variant="h2" fontWeight="bold" className={classes.text}>
+          <Typography variant="h3" fontWeight="bold" className={classes.text}>
             Score Renovations
           </Typography>
-          <Typography variant="subtitle1" fontSize="2rem" fontWeight="bold" className={classes.text}>
+          <Typography variant="subtitle1" fontSize="1.75rem" fontWeight="bold" className={classes.text}>
             Renovation made easy!
           </Typography>
-          {/* <Box className={classes.desc}>
-            <Typography variant="subtitle1" fontWeight="bold">
+          <Box className={`${classes.desc} ${classes.text}`}>
+            <Typography variant="body" fontWeight="bold" fontSize="1.5rem">
               An insured and experienced team in Ottawa, ON. specializing in
               kitchens and bathrooms remodeling and renovations, finishing
               basements from framing to drywall we do it all. We always
               providing a lengthy warranty on our work. Quality work,
               punctuality and cleanliness are always our main priority
             </Typography>
-          </Box> */}
+          </Box>
         </div>
       </div>
     </div>
