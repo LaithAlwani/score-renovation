@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/styles";
 import Alert from "@material-ui/core/Alert";
 import Box from "@material-ui/core/Box";
@@ -6,6 +7,8 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { Typography } from "@material-ui/core";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import CallIcon from "@material-ui/icons/Call";
 
 import emailjs from "emailjs-com";
 
@@ -18,7 +21,12 @@ const useStyles = makeStyles(() => ({
     padding: "0.25rem",
     position: "relative",
   },
-  whatsaap: {
+  icons: {
+    transform: "scale(1.3)",
+    margin: "0.5rem",
+    color:"black"
+  },
+  whatsapp: {
     color: "green",
   },
 }));
@@ -33,6 +41,10 @@ function Contact() {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
+  const userId = process.env.REACT_APP_USER_ID;
+  const serviceId = process.env.REACT_APP_SERVICE_ID;
+  const templateId = process.env.REACT_APP_TEMPLATE_ID;
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setNameError(false);
@@ -46,13 +58,12 @@ function Contact() {
       e.target.subject.value &&
       e.target.message.value
     ) {
-      console.log("Success");
       emailjs
         .sendForm(
-          "service_25vrwg9",
-          "template_9eqd1ek",
+          serviceId,
+          templateId,
           e.target,
-          "user_7j0TOSmTP49f6sVZrw2Li"
+          userId
         )
         .then(
           (result) => {
@@ -102,14 +113,31 @@ function Contact() {
         onSubmit={handleSubmit}
       >
         <Typography variant="h4">Contact us:</Typography>
-        <a href="https://wa.me/+16139817682" target="_blank" rel="noreferrer">
-          <WhatsAppIcon className={classes.whatsaap} />
-        </a>
-        Email:​info@scorerenovation.com
+        <Link
+          to={{ pathname: "https://wa.me/+16139817682" }}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <WhatsAppIcon className={`${classes.icons} ${classes.whatsapp}`} />
+        </Link>
+        <Link
+          to={{ pathname: "mailto:info@scorerenovation.com" }}
+          rel="noreferrer"
+          target="_blank"
+        >
+          <MailOutlineIcon className={classes.icons} />
+        </Link>
+
+        <Link 
+        to={{ pathname: "tel:6139817682" }}
+          rel="noreferrer"
+          target="_blank"
+        >
+          <CallIcon className={classes.icons} />
+        </Link>
         {error && <Alert severity="error">{error}</Alert>}
         {success && <Alert severity="success">{success}</Alert>}
         <TextField
-          // onChange={(e) => setName(e.target.value)}
           label="Name"
           name="name"
           variant="outlined"

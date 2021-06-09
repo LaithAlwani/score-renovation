@@ -38,13 +38,13 @@ function About() {
     <div className={classes.root} id="about">
       <div className={classes.titleContainer}>
         <div className={classes.title}>
-          <Typography variant="h3" fontWeight="bold" className={classes.text}>
+          <Typography variant="h3" component="h1" fontWeight="bold" className={classes.text}>
             Score Renovations
           </Typography>
           <Typography variant="subtitle1" fontSize="1.75rem" fontWeight="bold" className={classes.text}>
             Renovation made easy!
           </Typography>
-          <Box className={`${classes.desc} ${classes.text}`}>
+          {/* <Box className={`${classes.desc} ${classes.text}`}>
             <Typography variant="body" fontWeight="bold" fontSize="1.5rem">
               An insured and experienced team in Ottawa, ON. specializing in
               kitchens and bathrooms remodeling and renovations, finishing
@@ -52,7 +52,7 @@ function About() {
               providing a lengthy warranty on our work. Quality work,
               punctuality and cleanliness are always our main priority
             </Typography>
-          </Box>
+          </Box> */}
         </div>
       </div>
     </div>
