@@ -1,25 +1,19 @@
-import React from "react";
-import Box from "@material-ui/core/Box";
-import ImageList from "@material-ui/core/ImageList";
-import ImageListItem from "@material-ui/core/ImageListItem";
-import { Container } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
-
-const useStyles = makeStyles(()=>({
-  root:{
-    minHeight:"100vh",
-    display:"flex",
-    justifyContent:"center",
-    alignItems:"center",
-    marginTop:"2rem"
-  }
-}))
+import { Box, ImageList, ImageListItem, Container } from "@mui/material";
 
 export default function Portfolio() {
-  const classes = useStyles();
   return (
-    <Box sx={{ margin: "0 auto" }} id="portfolio" className={classes.root}>
-      <Container sx={{}}>
+    <Box
+      id="portfolio"
+      sx={{
+        margin: "0 auto",
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: "2rem",
+      }}
+    >
+      <Container>
         <ImageList variant="masonry" cols={2} gap={8}>
           {itemData.map((item) => (
             <ImageListItem key={item.img} elevation={1}>

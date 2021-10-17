@@ -1,38 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { makeStyles } from "@material-ui/styles";
-import Alert from "@material-ui/core/Alert";
-import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import { Typography } from "@material-ui/core";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import CallIcon from "@material-ui/icons/Call";
+import { Alert, Box, Button, TextField, Typography } from "@mui/material";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import CallIcon from "@mui/icons-material/Call";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 import emailjs from "emailjs-com";
 
-const useStyles = makeStyles(() => ({
-  root: {
-    minHeight: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "0.25rem",
-    position: "relative",
-  },
-  icons: {
-    transform: "scale(1.3)",
-    margin: "0.5rem",
-    color:"black"
-  },
-  whatsapp: {
-    color: "green",
-  },
-}));
+
 
 function Contact() {
-  const classes = useStyles();
   const [nameError, setNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [subjectError, setSubjectError] = useState(false);
@@ -58,29 +35,22 @@ function Contact() {
       e.target.subject.value &&
       e.target.message.value
     ) {
-      emailjs
-        .sendForm(
-          serviceId,
-          templateId,
-          e.target,
-          userId
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            setSuccess("Request Set");
-            setTimeout(() => {
-              setSuccess("");
-            }, 3000);
-          },
-          (error) => {
-            console.log(error.text);
-            setError("Request Failed");
-            setTimeout(() => {
-              setError("");
-            }, 3000);
-          }
-        );
+      emailjs.sendForm(serviceId, templateId, e.target, userId).then(
+        (result) => {
+          console.log(result.text);
+          setSuccess("Request Set");
+          setTimeout(() => {
+            setSuccess("");
+          }, 3000);
+        },
+        (error) => {
+          console.log(error.text);
+          setError("Request Failed");
+          setTimeout(() => {
+            setError("");
+          }, 3000);
+        }
+      );
 
       e.target.reset();
     } else {
@@ -102,7 +72,18 @@ function Contact() {
   useEffect(() => {});
 
   return (
-    <div className={classes.root} id="contact">
+    <Box
+      id="contact"
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "0.25rem",
+        position: "relative",
+        marginBottom:"-50px"
+      }}
+    >
       <Box
         component="form"
         sx={{
@@ -118,22 +99,41 @@ function Contact() {
           target="_blank"
           rel="noreferrer"
         >
-          <WhatsAppIcon className={`${classes.icons} ${classes.whatsapp}`} />
+          <WhatsAppIcon
+            sx={{
+              transform: "scale(1.3)",
+              margin: "0.5rem",
+              color: "black",
+              color: "green",
+            }}
+          />
         </Link>
         <Link
           to={{ pathname: "mailto:info@scorerenovation.com" }}
           rel="noreferrer"
           target="_blank"
         >
-          <MailOutlineIcon className={classes.icons} />
+          <MailOutlineIcon
+            sx={{
+              transform: "scale(1.3)",
+              margin: "0.5rem",
+              color: "black",
+            }}
+          />
         </Link>
 
-        <Link 
-        to={{ pathname: "tel:6139817682" }}
+        <Link
+          to={{ pathname: "tel:6139817682" }}
           rel="noreferrer"
           target="_blank"
         >
-          <CallIcon className={classes.icons} />
+          <CallIcon
+            sx={{
+              transform: "scale(1.3)",
+              margin: "0.5rem",
+              color: "black",
+            }}
+          />
         </Link>
         {error && <Alert severity="error">{error}</Alert>}
         {success && <Alert severity="success">{success}</Alert>}
@@ -165,7 +165,7 @@ function Contact() {
         />
         <TextField
           // onChange={(e) => setMessage(e.target.value)}
-          className={classes.field}
+          
           label="Message"
           name="message"
           variant="outlined"
@@ -179,7 +179,7 @@ function Contact() {
           Submit
         </Button>
       </Box>
-    </div>
+    </Box>
   );
 }
 
