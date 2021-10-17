@@ -1,8 +1,8 @@
-import React from "react";
-import { AppBar, Toolbar, Box, Button } from "@mui/material";
+import { Link } from "react-router-dom";
+import { AppBar, Toolbar, Box, Button, Fab } from "@mui/material";
 // import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 // import Fab from "@material-ui/core/Fab";
-// import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 // import Zoom from "@material-ui/core/Zoom";
 
 export default function Navbar() {
@@ -46,12 +46,13 @@ export default function Navbar() {
         </Button>
       </Toolbar>
 
-      {/* <ScrollTop>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
+      
+      <Fab color="secondary" size="small" aria-label="scroll back to top" sx={{ position: "fixed", bottom: 20, right: 20 }}>
+        <a href="#about" style={{color:"white", paddingTop:"0.5rem"}}><KeyboardArrowUpIcon /></a>
+          
         </Fab>
-      </ScrollTop> */}
-      {/* </Container> */}
+      
+      
     </AppBar>
   );
 }

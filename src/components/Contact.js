@@ -88,6 +88,7 @@ function Contact() {
         component="form"
         sx={{
           "& .MuiTextField-root": { my: 1 },
+          "@media (min-width:600px)":{width:"65%"}
         }}
         noValidate
         autoComplete="off"

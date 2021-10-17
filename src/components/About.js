@@ -1,11 +1,10 @@
-import React from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 function About() {
-  
   return (
     <Box
+      id="about"
       sx={{
         minHeight: "100vh",
         backgroundImage: `url(${
@@ -15,7 +14,6 @@ function About() {
         backgroundRepeat: "no-repeat",
         marginBottom: "5rem",
       }}
-      id="about"
     >
       <Box
         sx={{
@@ -47,7 +45,7 @@ function About() {
               "@media (min-width:768px)": {
                 width: "100%",
                 margin: "0 auto",
-              }
+              },
             }}
           >
             <Typography variant="body" fontWeight="bold" fontSize="1.5rem">

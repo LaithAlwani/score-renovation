@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "freelance-50be3"
+  },
+  "targets": {
+    "freelance-50be3": {
+      "hosting": {
+        "score": [
+          "score-renovations"
+        ]
+      }
+    }
+  }
+}

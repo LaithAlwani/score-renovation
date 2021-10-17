@@ -13,10 +13,10 @@ export default function Portfolio() {
         marginTop: "2rem",
       }}
     >
-      <Container>
-        <ImageList variant="masonry" cols={2} gap={8}>
+      <Box sx={{ width: 500, height: "80vh", overflowY: 'scroll' }}>
+        <ImageList variant="masonry" cols={3} gap={10}>
           {itemData.map((item) => (
-            <ImageListItem key={item.img} elevation={1}>
+            <ImageListItem key={item.img} elevation={10}>
               <img
                 srcSet={`${item.img}?w=161&fit=crop&auto=format 1x,
                 ${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
@@ -26,7 +26,7 @@ export default function Portfolio() {
             </ImageListItem>
           ))}
         </ImageList>
-      </Container>
+      </Box>
     </Box>
   );
 }
