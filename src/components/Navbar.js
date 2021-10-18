@@ -15,7 +15,6 @@ export default function Navbar() {
         color: "black !important",
       }}
     >
-      {/* <Container fixed> */}
       <Toolbar
         id="back-to-top-anchor"
         sx={{
@@ -25,13 +24,13 @@ export default function Navbar() {
           },
         }}
       >
-        <Box sx={{flexGrow:1}}>
+        <Box sx={{ flexGrow: 1 }}>
           <img
             src={
               process.env.PUBLIC_URL + "/images/score-renovation-black_logo.png"
             }
             alt="logo"
-            style={{width:"50px"}}
+            style={{ width: "75px" }}
           />
         </Box>
 
@@ -45,14 +44,6 @@ export default function Navbar() {
           Contact
         </Button>
       </Toolbar>
-
-      
-      <Fab color="secondary" size="small" aria-label="scroll back to top" sx={{ position: "fixed", bottom: 20, right: 20 }}>
-        <a href="#about" style={{color:"white", paddingTop:"0.5rem"}}><KeyboardArrowUpIcon /></a>
-          
-        </Fab>
-      
-      
     </AppBar>
   );
 }

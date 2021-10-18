@@ -8,7 +8,7 @@ function About() {
       sx={{
         minHeight: "100vh",
         backgroundImage: `url(${
-          process.env.PUBLIC_URL + "/images/Kitchen-S.jpg"
+          "/images/Kitchen-S.jpg"
         })`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
