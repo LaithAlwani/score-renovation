@@ -176,7 +176,7 @@ function Contact() {
           required
           error={messageError}
         />
-        <Button type="submit" variant="contained" color="secondary" fullWidth>
+        <Button type="submit" variant="contained" color="secondary" >
           Submit
         </Button>
       </Box>

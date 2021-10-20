@@ -1,89 +1,104 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Card, CardContent, CardMedia, Container, Grid } from "@mui/material";
+import ImageCarousel from "./ImageCarousel";
 
-function About() {
+export default function About() {
   return (
-    <Container
+    <Box
       id="about"
       sx={{
         minHeight: "100vh",
-        height: "100vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+
+        // display: "flex",
+        // justifyContent: "center",
+        // alignItems: "center",
       }}
     >
-      <Box >
-
-      <Typography variant="h4" sx={{textAlign:"center", mb:2}}>About Us</Typography>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={4}>
-          <Card sx={{width:300, height:425, margin:"0 auto"}}>
-            <CardMedia component="img" src="https://images.unsplash.com/photo-1549388604-817d15aa0110" alt="" height="300" />
-            <CardContent>
-              <Typography variant="h6">Tilte</Typography>
-              <Typography variant="body2">specializing in
-              kitchens and bathrooms remodeling and renovations</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Card sx={{width:300, height:425, margin:"0 auto"}}>
-            <CardMedia component="img" src="https://images.unsplash.com/photo-1525097487452-6278ff080c31" alt="" height="300" />
-            <CardContent>
-              <Typography variant="h6">Tilte</Typography>
-              <Typography variant="body2">finishing
-              basements from framing to drywall we do it all</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Card sx={{width:300, height:425, margin:"0 auto"}}>
-            <CardMedia component="img" src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6" alt="" height="300" />
-            <CardContent>
-              <Typography variant="h6">Tilte</Typography>
-              <Typography variant="body2">We always
-              providing a lengthy warranty on our work. Quality work,
-              punctuality and cleanliness are always our main priority</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
-      </Box>
-      {/* <Box
+      <Box
+        margin="5rem 0"
+        height="450px"
+        position="relative"
         sx={{
-          height: "100vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          backgroundImage: `url("/images/Kitchen_(8).jpg")`,
+          backgroundPosition: "left center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
       >
-        <Box sx={{ textAlign: "center" }}>
+        <Container>
           <Typography
-            variant="h3"
-            component="h1"
-            fontWeight="bold"
-            sx={{ color: "white", textShadow: "2px 2px 4px black" }}
-          >
-            Score Renovations
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            fontSize="1.75rem"
-            fontWeight="bold"
-            sx={{ color: "white", textShadow: "2px 2px 4px black" }}
-          >
-            Renovation made easy!
-          </Typography>
-          <Box
+            variant="h5"
             sx={{
-              "@media (min-width:768px)": {
-                width: "100%",
-                margin: "0 auto",
-              },
+              position: "absolute",
+              bottom: 30,
+              color: "white",
+              fontWeight: "bold",
+              textShadow: "1px 1px black",
             }}
           >
+            Quality is our main prioroty
+          </Typography>
+        </Container>
+      </Box>
+      <Container>
+        <Typography variant="h4" sx={{ textAlign: "center", mb: 2 }}>
+          About Us
+        </Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={4}>
+            <Card sx={{ width: "100%", height: 450, margin: "0 auto" }}>
+              <CardMedia
+                component="img"
+                src="images/20210402_115058.jpg"
+                alt=""
+                height="300"
+              />
+              <CardContent>
+                <Typography variant="h6">Remodeling</Typography>
+                <Typography variant="body2">
+                  specializing in kitchens and bathrooms remodeling and
+                  renovations
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Card sx={{ width: "100%", height: 450, margin: "0 auto" }}>
+              <CardMedia
+                component="img"
+                src="images/basement02.jpeg"
+                alt=""
+                height="300"
+              />
+              <CardContent>
+                <Typography variant="h6">Finishing</Typography>
+                <Typography variant="body2">
+                  From framing to drywalls we do it all!
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Card sx={{ width: "100%", height: 450, margin: "0 auto" }}>
+              <CardMedia
+                component="img"
+                src="images/bath_reno_0004.jpg"
+                alt=""
+                height="300"
+              />
+              <CardContent>
+                <Typography variant="h6">Quality</Typography>
+                <Typography variant="body2">
+                  Punctuality and cleanliness are always our main priority,
+                  backed by our lengthy warranty.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+      {/* 
             <Typography variant="body" fontWeight="bold" fontSize="1.5rem">
               An insured and experienced team in Ottawa, ON. specializing in
               kitchens and bathrooms remodeling and renovations, finishing
@@ -91,11 +106,8 @@ function About() {
               providing a lengthy warranty on our work. Quality work,
               punctuality and cleanliness are always our main priority
             </Typography>
-          </Box>
-        </Box>
-      </Box> */}
-    </Container>
+          
+         */}
+    </Box>
   );
 }
-
-export default About;
