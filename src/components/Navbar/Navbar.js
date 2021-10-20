@@ -11,7 +11,7 @@ export default function Navbar() {
       position="fixed"
       sx={{
         backgroundColor: "rgba(255,255,255,0.5)",
-        color: "black",
+        color: "inherit",
       }}
     >
       <Toolbar

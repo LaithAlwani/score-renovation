@@ -136,7 +136,7 @@ function Contact() {
           required
           error={messageError}
         />
-        <Button type="submit" variant="contained"  sx={{width:"100%", backgroundColor:"black"}}>
+        <Button type="submit" variant="contained"  sx={{width:"100%", backgroundColor:"#5b5b5b", "&:hover":{backgroundColor:"#444444"}}}>
           Submit
         </Button>
       </Box>

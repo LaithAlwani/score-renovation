@@ -4,6 +4,7 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
 
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <Hero />
       <About />
       <Portfolio />
       <Contact />
