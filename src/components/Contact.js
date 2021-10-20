@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Alert, Box, Button, TextField, Typography } from "@mui/material";
+import { Alert, Box, Button, Container, TextField } from "@mui/material";
 
-import CallIcon from "@mui/icons-material/Call";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-
+import ContactSupportIcon from '@mui/icons-material/ContactSupport';
+import Title from "./Title";
 import emailjs from "emailjs-com";
 
 
@@ -72,57 +71,31 @@ function Contact() {
   useEffect(() => {});
 
   return (
-    <Box
+    <Container
       id="contact"
       sx={{
         minHeight: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "0.25rem",
-        position: "relative",
-        marginBottom:"-50px"
+        
+        
+        marginBottom: "-50px",
+        backgroundColor:"white"
       }}
     >
       <Box
         component="form"
         sx={{
           "& .MuiTextField-root": { my: 1 },
-          "@media (min-width:600px)":{width:"65%"}
         }}
         noValidate
         autoComplete="off"
         onSubmit={handleSubmit}
       >
-        <Typography variant="h4">Contact us:</Typography>
-        
-        {/* <Link
-          to={{ pathname: "mailto:info@scorerenovation.com" }}
-          rel="noreferrer"
-          target="_blank"
-        >
-          <MailOutlineIcon
-            sx={{
-              transform: "scale(1.3)",
-              margin: "0.5rem",
-              color: "black",
-            }}
-          />
-        </Link> */}
+        <Title text="CONTACT US" icon={<ContactSupportIcon fontSize="large" />} />
 
-        <Link
-          to={{ pathname: "tel:6139817682" }}
-          rel="noreferrer"
-          target="_blank"
-        >
-          <CallIcon
-            sx={{
-              transform: "scale(1.3)",
-              margin: "0.5rem",
-              color: "black",
-            }}
-          />
-        </Link>
+        
         {error && <Alert severity="error">{error}</Alert>}
         {success && <Alert severity="success">{success}</Alert>}
         <TextField
@@ -163,11 +136,11 @@ function Contact() {
           required
           error={messageError}
         />
-        <Button type="submit" variant="contained" color="secondary" sx={{width:"100%"}}>
+        <Button type="submit" variant="contained"  sx={{width:"100%", backgroundColor:"black"}}>
           Submit
         </Button>
       </Box>
-    </Box>
+    </Container>
   );
 }
 

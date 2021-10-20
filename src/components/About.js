@@ -1,7 +1,8 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Card, CardContent, CardMedia, Container, Grid } from "@mui/material";
-import ImageCarousel from "./ImageCarousel";
+import InfoIcon from '@mui/icons-material/Info';
+import Title from "./Title";
 
 export default function About() {
   return (
@@ -9,14 +10,15 @@ export default function About() {
       id="about"
       sx={{
         minHeight: "100vh",
-
+        
+        
         // display: "flex",
         // justifyContent: "center",
         // alignItems: "center",
       }}
     >
       <Box
-        margin="5rem 0"
+        margin="6rem 0"
         height="450px"
         position="relative"
         sx={{
@@ -27,7 +29,7 @@ export default function About() {
         }}
       >
         <Container>
-          <Typography
+          {/* <Typography
             variant="h5"
             sx={{
               position: "absolute",
@@ -38,13 +40,11 @@ export default function About() {
             }}
           >
             Quality is our main prioroty
-          </Typography>
+          </Typography> */}
         </Container>
       </Box>
       <Container>
-        <Typography variant="h4" sx={{ textAlign: "center", mb: 2 }}>
-          About Us
-        </Typography>
+        <Title text="ABOUT US" icon={<InfoIcon fontSize="large" />}/>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
             <Card sx={{ width: "100%", height: 450, margin: "0 auto" }}>
@@ -98,16 +98,6 @@ export default function About() {
           </Grid>
         </Grid>
       </Container>
-      {/* 
-            <Typography variant="body" fontWeight="bold" fontSize="1.5rem">
-              An insured and experienced team in Ottawa, ON. specializing in
-              kitchens and bathrooms remodeling and renovations, finishing
-              basements from framing to drywall we do it all. We always
-              providing a lengthy warranty on our work. Quality work,
-              punctuality and cleanliness are always our main priority
-            </Typography>
-          
-         */}
     </Box>
   );
 }
