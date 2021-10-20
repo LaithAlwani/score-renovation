@@ -24,7 +24,7 @@ export default function About() {
             <Card sx={{ width: "100%", height: 450, margin: "0 auto" }}>
               <CardMedia
                 component="img"
-                src="images/20210402_115058.jpg"
+                src="images/20210402_115058-min.jpg"
                 alt=""
                 height="300"
               />
@@ -41,7 +41,7 @@ export default function About() {
             <Card sx={{ width: "100%", height: 450, margin: "0 auto" }}>
               <CardMedia
                 component="img"
-                src="images/basement02.jpeg"
+                src="images/basement02-min.jpeg"
                 alt=""
                 height="300"
               />
@@ -57,7 +57,7 @@ export default function About() {
             <Card sx={{ width: "100%", height: 450, margin: "0 auto" }}>
               <CardMedia
                 component="img"
-                src="images/bath_reno_0004.jpg"
+                src="images/bath_reno_0004-min.jpg"
                 alt=""
                 height="300"
               />

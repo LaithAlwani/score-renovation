@@ -101,6 +101,7 @@ function Contact() {
         <TextField
           label="Name"
           name="name"
+          aria-label="name"
           variant="outlined"
           fullWidth
           required
@@ -110,6 +111,7 @@ function Contact() {
           // onChange={(e) => setEmail(e.target.value)}
           label="Email"
           name="email"
+          aria-label="email"
           variant="outlined"
           fullWidth
           required
@@ -119,6 +121,7 @@ function Contact() {
           // onChange={(e) => setTitle(e.target.value)}
           label="Subject"
           name="subject"
+          aria-label="subject"
           variant="outlined"
           fullWidth
           required
@@ -126,9 +129,9 @@ function Contact() {
         />
         <TextField
           // onChange={(e) => setMessage(e.target.value)}
-          
           label="Message"
           name="message"
+          aria-label="message"
           variant="outlined"
           multiline={true}
           rows={5}
@@ -136,7 +139,7 @@ function Contact() {
           required
           error={messageError}
         />
-        <Button type="submit" variant="contained"  sx={{width:"100%", backgroundColor:"#5b5b5b", "&:hover":{backgroundColor:"#444444"}}}>
+        <Button type="submit" aria-label="submit" variant="contained"  sx={{width:"100%", backgroundColor:"#5b5b5b", "&:hover":{backgroundColor:"#444444"}}}>
           Submit
         </Button>
       </Box>
