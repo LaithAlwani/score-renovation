@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Alert, Box, Button, TextField, Typography } from "@mui/material";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+
 import CallIcon from "@mui/icons-material/Call";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
@@ -95,21 +95,8 @@ function Contact() {
         onSubmit={handleSubmit}
       >
         <Typography variant="h4">Contact us:</Typography>
-        <Link
-          to={{ pathname: "https://wa.me/+16139817682" }}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <WhatsAppIcon
-            sx={{
-              transform: "scale(1.3)",
-              margin: "0.5rem",
-              color: "black",
-              color: "green",
-            }}
-          />
-        </Link>
-        <Link
+        
+        {/* <Link
           to={{ pathname: "mailto:info@scorerenovation.com" }}
           rel="noreferrer"
           target="_blank"
@@ -121,7 +108,7 @@ function Contact() {
               color: "black",
             }}
           />
-        </Link>
+        </Link> */}
 
         <Link
           to={{ pathname: "tel:6139817682" }}
@@ -176,7 +163,7 @@ function Contact() {
           required
           error={messageError}
         />
-        <Button type="submit" variant="contained" color="secondary" >
+        <Button type="submit" variant="contained" color="secondary" sx={{width:"100%"}}>
           Submit
         </Button>
       </Box>

@@ -1,4 +1,4 @@
-import { Box, ImageList, ImageListItem, Container } from "@mui/material";
+import { Box, ImageList, ImageListItem, Container, Grid } from "@mui/material";
 
 export default function Portfolio() {
   return (
@@ -13,7 +13,37 @@ export default function Portfolio() {
         marginTop: "2rem",
       }}
     >
-      <Box sx={{ width: 500, height: "80vh", overflowY: 'scroll' }}>
+      <Grid container spacing={1}>
+        <Grid item xs={6} md={3}>
+          <img
+            src="https://images.unsplash.com/photo-1549388604-817d15aa0110"
+            alt=""
+            style={{width:"100%"}}
+          />
+        </Grid>
+        <Grid item xs={6} md={3}>
+          <img
+            src="https://images.unsplash.com/photo-1549388604-817d15aa0110"
+            alt=""
+            style={{width:"100%"}}
+          />
+        </Grid>
+        <Grid item xs={6} md={3}>
+          <img
+            src="https://images.unsplash.com/photo-1574180045827-681f8a1a9622"
+            alt=""
+            style={{width:"100%"}}
+          />
+        </Grid>
+        <Grid item xs={6} md={3}>
+          <img
+            src="https://images.unsplash.com/photo-1525097487452-6278ff080c31"
+            alt=""
+            style={{width:"100%"}}
+          />
+        </Grid>
+      </Grid>
+      {/* <Box sx={{ width: 500, height: "80vh", overflowY: 'scroll' }}>
         <ImageList variant="masonry" cols={3} gap={10}>
           {itemData.map((item) => (
             <ImageListItem key={item.img} elevation={10}>
@@ -26,7 +56,7 @@ export default function Portfolio() {
             </ImageListItem>
           ))}
         </ImageList>
-      </Box>
+      </Box> */}
     </Box>
   );
 }
