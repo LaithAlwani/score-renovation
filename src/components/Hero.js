@@ -11,57 +11,60 @@ export default function Hero() {
       }}
     >
       <Box width="100%">
-        <Container>
-          <Typography
-            variant="h1"
-            fontSize="7vmin"
-            sx={{
-              textAlign: "center",
-              fontWeight: "bold",
-              //   textShadow: "1px 1px black",
-            }}
-          >
-            Score Renovations
-          </Typography>
-        </Container>
 
         <Box
           sx={{
-            width: "100%",
-            minHeight: "50vh",
-            margin: "1rem 0",
-            position: "relative",
-            backgroundImage: `url("/images/kitchen-min.jpg")`,
-            backgroundPosition: "left center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        ></Box>
-        <Container sx={{ textAlign: "center" }}>
-          <Typography
-            variant="h2"
-            fontSize="5vmin"
-            sx={{
-              textAlign: "center",
-              fontWeight: "bold",
-              //   textShadow: "1px 1px #5b5b5b",
+              width: "100%",
+              minHeight: "70vh",
+              margin: "1rem 0",
+              position: "relative",
+              backgroundImage: `url("/images/kitchen-min.jpg")`,
+              backgroundPosition: "left center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
             }}
-          >
-            Quality is our main prioroty
-          </Typography>
-          <Button
-            variant="contained"
-            sx={{
-              mt: 2,
-              width: "250px",
-              backgroundColor: "#5b5b5b",
-              "&:hover": { backgroundColor: "#444444" },
-            }}
-            href="#about"
-          >
-            Learn More
-          </Button>
-        </Container>
+        >
+            <Container>
+              <Typography
+                variant="h1"
+                fontSize="7vmin"
+                sx={{
+                  textAlign: "center",
+                    fontWeight: "bold",
+                  color:"white",
+                  textShadow: "1px 1px #444444",
+                }}
+              >
+                Score Renovations
+              </Typography>
+            </Container>
+          <Container sx={{ textAlign: "center", position:"absolute", bottom:10 }}>
+            <Typography
+              variant="h2"
+              fontSize="5vmin"
+              sx={{
+                textAlign: "center",
+                  fontWeight: "bold",
+                color:"white",
+                textShadow: "1px 1px #444444",
+              }}
+            >
+              Quality is our main priority
+            </Typography>
+            <Button
+              variant="contained"
+              sx={{
+                mt: 2,
+                width: "250px",
+                backgroundColor: "#5b5b5b",
+                "&:hover": { backgroundColor: "#444444" },
+              }}
+              href="#about"
+            >
+              Learn More
+            </Button>
+          </Container>
+        </Box>
       </Box>
     </Box>
   );
