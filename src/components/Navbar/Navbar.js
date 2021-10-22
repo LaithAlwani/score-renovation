@@ -10,8 +10,8 @@ export default function Navbar() {
     <AppBar
       position="fixed"
       sx={{
-        backgroundColor: "rgba(255,255,255,0.5)",
-        color: "inherit",
+        backgroundColor: "rgba(68,68,68,0.5)",
+        color: "white",
       }}
     >
       <Toolbar

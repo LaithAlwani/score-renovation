@@ -48,7 +48,7 @@ export default function Hero() {
               sx={{
                 width: "100%",
                 position: "absolute",
-                bottom: 100,
+                bottom: 50,
               }}
             >
               <Typography variant="h2" fontSize="5vmin" sx={styles.textWhite}>
