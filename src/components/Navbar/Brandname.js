@@ -1,17 +1,17 @@
 import { Box, Button, Typography } from "@mui/material";
 export default function Brandname() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Button href="#main">
+    <Box sx={{ flexGrow: 1, p:0 }}>
+      <Button href="#main" sx={{p:0}}>
         <img
-          src={"/images/sr-logo-white.ico"}
+          src={"/images/srl-white.ico"}
           alt="logo"
-          style={{ width: "100px" }}
+          style={{ width: "60px" }}
         />
       </Button>
-      {/* <Typography variant="body2" sx={{ whiteSpace: "nowrap" }}>
-        Quality Construction
-      </Typography> */}
+      <Typography variant="subtitle2" >
+        Score Renovations
+      </Typography>
     </Box>
   );
 }

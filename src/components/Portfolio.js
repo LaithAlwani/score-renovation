@@ -10,28 +10,28 @@ export default function Portfolio() {
         <Grid container spacing={1}>
           <Grid item xs={6} md={3}>
             <img
-              src="/images/20210608_131330-min.jpg"
+              src="/images/20210608_131330-min.avif"
               alt=""
               style={{ width: "100%" }}
             />
           </Grid>
           <Grid item xs={6} md={3}>
             <img
-              src="/images/20210615_143717-min.jpg"
+              src="/images/20210615_143717-min.avif"
               alt=""
               style={{ width: "100%" }}
             />
           </Grid>
           <Grid item xs={6} md={3}>
             <img
-              src="/images/20210716_121341-min.jpg"
+              src="/images/20210716_121341-min.avif"
               alt=""
               style={{ width: "100%" }}
             />
           </Grid>
           <Grid item xs={6} md={3}>
             <img
-              src="/images/20210716_121248-min.jpg"
+              src="/images/20210716_121248-min.avif"
               alt=""
               style={{ width: "100%" }}
             />
