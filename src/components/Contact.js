@@ -33,7 +33,8 @@ function Contact() {
       emailjs.sendForm(serviceId, templateId, e.target, userId).then(
         (result) => {
           console.log(result.text);
-          setSuccess("Request Set");
+          setSuccess("Request Sent");
+          e.target.reset();
           setTimeout(() => {
             setSuccess("");
           }, 3000);
@@ -46,8 +47,6 @@ function Contact() {
           }, 3000);
         }
       );
-
-      e.target.reset();
     } else {
       if (!e.target.name.value) {
         setNameError(true);
