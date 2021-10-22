@@ -12,7 +12,7 @@ export default function WhatsAppFab() {
       sx={{
         position: "fixed",
         bottom: 20,
-        right: 20,
+        right: 10,
         backgroundColor: "green",
         "&:hover": { backgroundColor: "darkgreen" },
         "&:active": { backgroundColor: "darkgreen" },

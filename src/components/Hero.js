@@ -3,12 +3,10 @@ import { Box, Button, Container, Typography } from "@mui/material";
 const styles = {
   root: {
     minHeight: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+    
   },
   hero: {
-    minHeight: "70vh",
+    minHeight: "100vh",
     position: "relative",
     backgroundImage: `url("/images/kitchen-min.jpg")`,
     backgroundPosition: "left center",
@@ -18,11 +16,12 @@ const styles = {
   textContainer: {
     backgroundColor: "rgba(0,0,0,0.5)",
     width: "100%",
-    height: "100%",
+    height: "100vh",
     position: "absolute",
     textAlign: "center",
   },
   textWhite: {
+    mt: 15,
     fontWeight: "bold",
     color: "white",
     textShadow: "1px 1px #444444",
@@ -41,16 +40,15 @@ export default function Hero() {
       <Box width="100%">
         <Box sx={styles.hero}>
           <Box sx={styles.textContainer}>
-            <Container>
-              <Typography variant="h1" fontSize="7vmin" sx={styles.textWhite}>
-                Score Renovations
-              </Typography>
-            </Container>
+            <Typography variant="h1" fontSize="7vmin" sx={styles.textWhite}>
+              Score Renovations
+            </Typography>
+
             <Box
               sx={{
                 width: "100%",
                 position: "absolute",
-                bottom: 20,
+                bottom: 100,
               }}
             >
               <Typography variant="h2" fontSize="5vmin" sx={styles.textWhite}>
@@ -63,6 +61,7 @@ export default function Hero() {
           </Box>
         </Box>
       </Box>
+      <div id="about"></div>
     </Box>
   );
 }

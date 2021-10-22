@@ -7,13 +7,9 @@ import Title from "./Title";
 export default function About() {
   return (
     <Box
-      id="about"
+      
       sx={{
-        margin: "0 auto",
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        margin: "8rem auto",
         position:"relative"
       }}
     >
@@ -72,6 +68,7 @@ export default function About() {
           </Grid>
         </Grid>
       </Container>
+      <div id="portfolio"></div>
     </Box>
   );
 }

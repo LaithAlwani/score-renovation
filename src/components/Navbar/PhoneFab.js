@@ -12,7 +12,7 @@ export default function PhoneFab() {
       sx={{
         position: "fixed",
         bottom: 70,
-        right: 20,
+        right: 10,
       }}
     >
       <CallIcon

@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Alert, Box, Button, Container, TextField } from "@mui/material";
 
-import ContactSupportIcon from '@mui/icons-material/ContactSupport';
+import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import Title from "./Title";
 import emailjs from "emailjs-com";
-
-
 
 function Contact() {
   const [nameError, setNameError] = useState(false);
@@ -74,14 +72,8 @@ function Contact() {
     <Container
       id="contact"
       sx={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        
-        
-        marginBottom: "-50px",
-        backgroundColor:"white"
+        marginTop: "8rem",
+        marginBottom: "3rem",
       }}
     >
       <Box
@@ -93,9 +85,11 @@ function Contact() {
         autoComplete="off"
         onSubmit={handleSubmit}
       >
-        <Title text="CONTACT US" icon={<ContactSupportIcon fontSize="large" />} />
+        <Title
+          text="CONTACT US"
+          icon={<ContactSupportIcon fontSize="large" />}
+        />
 
-        
         {error && <Alert severity="error">{error}</Alert>}
         {success && <Alert severity="success">{success}</Alert>}
         <TextField
@@ -139,7 +133,16 @@ function Contact() {
           required
           error={messageError}
         />
-        <Button type="submit" aria-label="submit" variant="contained"  sx={{width:"100%", backgroundColor:"#5b5b5b", "&:hover":{backgroundColor:"#444444"}}}>
+        <Button
+          type="submit"
+          aria-label="submit"
+          variant="contained"
+          sx={{
+            width: "100%",
+            backgroundColor: "#5b5b5b",
+            "&:hover": { backgroundColor: "#444444" },
+          }}
+        >
           Submit
         </Button>
       </Box>
