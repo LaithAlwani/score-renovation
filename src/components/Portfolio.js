@@ -42,63 +42,63 @@ export default function Portfolio() {
               />
             </Grid>
           </Grid>
-          <Grid container spacing={1} item xs={12} md={4}  >
-            <Grid item xs={6} >
+          <Grid container spacing={1} item xs={12} md={4} sx={{ "& >*": { height: "250px" }}} >
+            <Grid item xs={6}  >
               <img
-                src="/images/bath01.avif"
+                src="/images/floor01.avif"
                 alt=""
-                style={{ width: "100%" }}
+                style={{ width: "100%", height:"100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath02.avif"
+                src="/images/floor02.avif"
                 alt=""
-                style={{ width: "100%" }}
+                style={{ width: "100%",  height:"100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath03.avif"
+                src="/images/floor03.avif"
                 alt=""
-                style={{ width: "100%" }}
+                style={{ width: "100%", }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath04.avif"
+                src="/images/floor04.avif"
                 alt=""
-                style={{ width: "100%" }}
+                style={{ width: "100%",  }}
               />
             </Grid>
           </Grid>
-          <Grid container spacing={1} item xs={12} md={4}  >
+          <Grid container spacing={1} item xs={12} md={4} sx={{ "& >*": { height: "250px" }}} >
             <Grid item xs={6} >
               <img
-                src="/images/bath01.avif"
+                src="/images/kitchen01.avif"
                 alt=""
-                style={{ width: "100%" }}
+                style={{ width: "100%",  height:"100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath02.avif"
+                src="/images/kitchen02.avif"
                 alt=""
-                style={{ width: "100%" }}
+                style={{ width: "100%", height:"100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath03.avif"
+                src="/images/bath05.avif"
                 alt=""
-                style={{ width: "100%" }}
+                style={{ width: "100%", height:"100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath04.avif"
+                src="/images/bath06.avif"
                 alt=""
-                style={{ width: "100%" }}
+                style={{ width: "100%", height:"100%" }}
               />
             </Grid>
           </Grid>
