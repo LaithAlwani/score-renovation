@@ -20,8 +20,8 @@ export default function About() {
             <Card sx={{ width: "100%", height: 450, margin: "0 auto" }}>
               <CardMedia
                 component="img"
-                src="images/20210402_115058-min.avif"
-                alt=""
+                src="images/about-kitchen.avif"
+                alt="kitchen"
                 height="300"
               />
               <CardContent>
@@ -37,7 +37,7 @@ export default function About() {
             <Card sx={{ width: "100%", height: 450, margin: "0 auto" }}>
               <CardMedia
                 component="img"
-                src="images/basement02-min.avif"
+                src="images/about-basement.avif"
                 alt=""
                 height="300"
               />
@@ -53,7 +53,7 @@ export default function About() {
             <Card sx={{ width: "100%", height: 450, margin: "0 auto" }}>
               <CardMedia
                 component="img"
-                src="images/bath_reno_0004-min.avif"
+                src="images/about-bath.avif"
                 alt=""
                 height="300"
               />

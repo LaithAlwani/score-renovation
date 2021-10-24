@@ -15,58 +15,28 @@ export default function Portfolio() {
           <Grid container spacing={1} item xs={12} md={4} >
             <Grid item xs={6} >
               <img
-                src="/images/20210608_131330-min.avif"
+                src="/images/bath01.avif"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/20210615_143717-min.avif"
+                src="/images/bath02.avif"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/20210716_121341-min.avif"
+                src="/images/bath03.avif"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/20210716_121248-min.avif"
-                alt=""
-                style={{ width: "100%" }}
-              />
-            </Grid>
-          </Grid>
-          <Grid container spacing={1} item xs={12} md={4}  >
-            <Grid item xs={6} >
-              <img
-                src="/images/20210608_131330-min.avif"
-                alt=""
-                style={{ width: "100%" }}
-              />
-            </Grid>
-            <Grid item xs={6} >
-              <img
-                src="/images/20210615_143717-min.avif"
-                alt=""
-                style={{ width: "100%" }}
-              />
-            </Grid>
-            <Grid item xs={6} >
-              <img
-                src="/images/20210716_121341-min.avif"
-                alt=""
-                style={{ width: "100%" }}
-              />
-            </Grid>
-            <Grid item xs={6} >
-              <img
-                src="/images/20210716_121248-min.avif"
+                src="/images/bath04.avif"
                 alt=""
                 style={{ width: "100%" }}
               />
@@ -75,28 +45,58 @@ export default function Portfolio() {
           <Grid container spacing={1} item xs={12} md={4}  >
             <Grid item xs={6} >
               <img
-                src="/images/20210608_131330-min.avif"
+                src="/images/bath01.avif"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/20210615_143717-min.avif"
+                src="/images/bath02.avif"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/20210716_121341-min.avif"
+                src="/images/bath03.avif"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/20210716_121248-min.avif"
+                src="/images/bath04.avif"
+                alt=""
+                style={{ width: "100%" }}
+              />
+            </Grid>
+          </Grid>
+          <Grid container spacing={1} item xs={12} md={4}  >
+            <Grid item xs={6} >
+              <img
+                src="/images/bath01.avif"
+                alt=""
+                style={{ width: "100%" }}
+              />
+            </Grid>
+            <Grid item xs={6} >
+              <img
+                src="/images/bath02.avif"
+                alt=""
+                style={{ width: "100%" }}
+              />
+            </Grid>
+            <Grid item xs={6} >
+              <img
+                src="/images/bath03.avif"
+                alt=""
+                style={{ width: "100%" }}
+              />
+            </Grid>
+            <Grid item xs={6} >
+              <img
+                src="/images/bath04.avif"
                 alt=""
                 style={{ width: "100%" }}
               />
