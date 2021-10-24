@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 
 function Footer() {
   return (
-    <Typography variant="subtitle2" align="center" >
+    <Typography variant="body1" align="center" >
       Copyright © Score Renovations
     </Typography>
   );

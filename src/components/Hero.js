@@ -42,7 +42,7 @@ export default function Hero() {
                 width: "100%",
               }}
             >
-              <Typography variant="h2" fontSize="7vmin" sx={styles.textWhite}>
+              <Typography variant="h3" fontSize="7vmin" sx={styles.textWhite}>
                 Quality is our main priority
               </Typography>
               <Button variant="contained" sx={styles.button} href="#about">

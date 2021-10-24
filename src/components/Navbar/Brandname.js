@@ -6,7 +6,7 @@ export default function Brandname() {
         <img
           src={"/images/srl-white.ico"}
           alt="logo"
-          style={{ width: "60px" }}
+          style={{ width: "60px", height:"60px" }}
         />
       </Button>
       <Typography variant="subtitle2" >

@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Alert, Box, Button, Container, TextField } from "@mui/material";
+import {
+  Alert,
+  Box,
+  Button,
+  Container,
+  InputLabel,
+  TextField,
+} from "@mui/material";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import Title from "./Title";
 import emailjs from "emailjs-com";
@@ -89,47 +96,56 @@ function Contact() {
 
         {error && <Alert severity="error">{error}</Alert>}
         {success && <Alert severity="success">{success}</Alert>}
-        <TextField
-          label="Name"
-          name="name"
-          aria-label="name"
-          variant="outlined"
-          fullWidth
-          required
-          error={nameError}
-        />
-        <TextField
-          // onChange={(e) => setEmail(e.target.value)}
-          label="Email"
-          name="email"
-          aria-label="email"
-          variant="outlined"
-          fullWidth
-          required
-          error={emailError}
-        />
-        <TextField
-          // onChange={(e) => setTitle(e.target.value)}
-          label="Subject"
-          name="subject"
-          aria-label="subject"
-          variant="outlined"
-          fullWidth
-          required
-          error={subjectError}
-        />
-        <TextField
-          // onChange={(e) => setMessage(e.target.value)}
-          label="Message"
-          name="message"
-          aria-label="message"
-          variant="outlined"
-          multiline={true}
-          rows={5}
-          fullWidth
-          required
-          error={messageError}
-        />
+        <InputLabel>
+          <TextField
+            label="Name"
+            name="name"
+            aria-label="name"
+            variant="outlined"
+            fullWidth
+            required
+            error={nameError}
+          />
+        </InputLabel>
+        <InputLabel>
+          <TextField
+            // onChange={(e) => setEmail(e.target.value)}
+            label="Email"
+            name="email"
+            aria-label="email"
+            variant="outlined"
+            fullWidth
+            required
+            error={emailError}
+          />
+        </InputLabel>
+        <InputLabel>
+          <TextField
+            // onChange={(e) => setTitle(e.target.value)}
+            label="Subject"
+            name="subject"
+            aria-label="subject"
+            variant="outlined"
+            fullWidth
+            required
+            error={subjectError}
+          />
+        </InputLabel>
+        <InputLabel>
+          <TextField
+            // onChange={(e) => setMessage(e.target.value)}
+            label="Message"
+            name="message"
+            aria-label="message"
+            variant="outlined"
+            multiline={true}
+            rows={5}
+            fullWidth
+            required
+            error={messageError}
+          />
+        </InputLabel>
+
         <Button
           type="submit"
           aria-label="submit"
