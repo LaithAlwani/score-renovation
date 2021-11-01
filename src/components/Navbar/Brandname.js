@@ -9,7 +9,7 @@ export default function Brandname() {
           style={{ width: "60px", height:"60px" }}
         />
       </Button>
-      <Typography variant="subtitle2" >
+      <Typography variant="subtitle2" sx={{whiteSpace:"nowrap"}} >
         Score Renovations
       </Typography>
     </Box>

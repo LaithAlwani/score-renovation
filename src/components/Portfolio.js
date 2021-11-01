@@ -15,28 +15,28 @@ export default function Portfolio() {
           <Grid container spacing={1} item xs={12} md={4} >
             <Grid item xs={6} >
               <img
-                src="/images/bath01.avif"
+                src="/images/bath01.jpg"
                 alt=""
                 style={{ width: "100%", height:"auto" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath02.avif"
+                src="/images/bath02.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath03.avif"
+                src="/images/bath03.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath04.avif"
+                src="/images/bath04.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />
@@ -45,28 +45,28 @@ export default function Portfolio() {
           <Grid container spacing={1} item xs={12} md={4}  >
             <Grid item xs={6}  >
               <img
-                src="/images/floor01.avif"
+                src="/images/floor01.jpeg"
                 alt=""
                 style={{ width: "100%", height:"auto" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/floor02.avif"
+                src="/images/floor02.jpeg"
                 alt=""
                 style={{ width: "100%", height:"auto" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/floor03.avif"
+                src="/images/floor03.jpg"
                 alt=""
                 style={{ width: "100%", height:"auto" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/floor04.avif"
+                src="/images/floor04.jpg"
                 alt=""
                 style={{ width: "100%", height:"auto"  }}
               />
@@ -75,28 +75,28 @@ export default function Portfolio() {
           <Grid container spacing={1} item xs={12} md={4}  >
             <Grid item xs={6} >
               <img
-                src="/images/kitchen01.avif"
+                src="/images/kitchen01.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/kitchen02.avif"
+                src="/images/kitchen02.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath05.avif"
+                src="/images/bath05.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
-                src="/images/bath06.avif"
+                src="/images/bath06.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />

@@ -6,7 +6,7 @@ const styles = {
   },
   hero: {
     minHeight: "100vh",
-    backgroundImage: `url("/images/main-backsplash.avif")`,
+    backgroundImage: `url("/images/main.jpg")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     textAlign:"center"
