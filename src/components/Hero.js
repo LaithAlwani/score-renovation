@@ -35,7 +35,7 @@ export default function Hero() {
   return (
     <Box id="main" sx={styles.root}>
       <Box width="100%">
-        <Box sx={styles.hero} role="img" aria-label="kitchen-reonvations" >
+        <Box sx={styles.hero} role="img" aria-label="kitchen reonvations" >
           <Box sx={styles.textContainer}>
             <Box
               sx={{

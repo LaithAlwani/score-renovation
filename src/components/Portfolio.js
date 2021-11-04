@@ -16,28 +16,28 @@ export default function Portfolio() {
             <Grid item xs={6} >
               <img
                 src="/images/bath01.jpg"
-                alt="bath-renovation"
+                alt="bath renovation"
                 style={{ width: "100%", height:"auto" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
                 src="/images/bath02.jpg"
-                alt="bath-renovation"
+                alt="bath renovation"
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
                 src="/images/bath03.jpg"
-                alt="bath-renovation"
+                alt="bath renovation"
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
                 src="/images/bath04.jpg"
-                alt="bath-renovation"
+                alt="bath renovation"
                 style={{ width: "100%" }}
               />
             </Grid>
@@ -46,28 +46,28 @@ export default function Portfolio() {
             <Grid item xs={6}  >
               <img
                 src="/images/floor01.jpeg"
-                alt="floor-renovation"
+                alt="floor renovation"
                 style={{ width: "100%", height:"auto" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
                 src="/images/floor02.jpeg"
-                alt="floor-renovation"
+                alt="floor renovation"
                 style={{ width: "100%", height:"auto" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
                 src="/images/floor03.jpg"
-                alt="floor-renovation"
+                alt="floor renovation"
                 style={{ width: "100%", height:"auto" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
                 src="/images/floor04.jpg"
-                alt="floor-renovation"
+                alt="floor renovation"
                 style={{ width: "100%", height:"auto"  }}
               />
             </Grid>
@@ -76,28 +76,28 @@ export default function Portfolio() {
             <Grid item xs={6} >
               <img
                 src="/images/kitchen01.jpg"
-                alt="kitchen-renovation"
+                alt="kitchen renovation"
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
                 src="/images/kitchen02.jpg"
-                alt="kitchen-renovation"
+                alt="kitchen renovation"
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
                 src="/images/bath05.jpg"
-                alt="shower-renovation"
+                alt="shower renovation"
                 style={{ width: "100%" }}
               />
             </Grid>
             <Grid item xs={6} >
               <img
                 src="/images/bath06.jpg"
-                alt="shower-renovation"
+                alt="shower renovation"
                 style={{ width: "100%" }}
               />
             </Grid>

@@ -21,7 +21,7 @@ export default function About() {
               <CardMedia
                 component="img"
                 src="images/about-kitchen.jpg"
-                alt="kitchen"
+                alt="kitchen renovation"
                 height="300"
               />
               <CardContent>
@@ -38,7 +38,7 @@ export default function About() {
               <CardMedia
                 component="img"
                 src="images/about-basement.jpeg"
-                alt=""
+                alt="basement renovation"
                 height="300"
               />
               <CardContent>
@@ -54,7 +54,7 @@ export default function About() {
               <CardMedia
                 component="img"
                 src="images/about-bath.jpg"
-                alt=""
+                alt="bath renovation"
                 height="300"
               />
               <CardContent>
