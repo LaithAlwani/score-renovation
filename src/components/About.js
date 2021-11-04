@@ -28,7 +28,7 @@ export default function About() {
                 <Typography variant="h4">Remodeling</Typography>
                 <Typography variant="body2">
                   specializing in kitchens and bathrooms remodeling and
-                  renovations
+                  renovations.
                 </Typography>
               </CardContent>
             </Card>
@@ -44,7 +44,7 @@ export default function About() {
               <CardContent>
                 <Typography variant="h4">Finishing</Typography>
                 <Typography variant="body2">
-                  From framing to drywalls we do it all!
+                  From framing to drywalls we renovate any room in your house.
                 </Typography>
               </CardContent>
             </Card>
@@ -60,7 +60,7 @@ export default function About() {
               <CardContent>
                 <Typography variant="h4">Quality</Typography>
                 <Typography variant="body2">
-                  Punctuality and cleanliness are always our main priority,
+                  Punctuality and cleanliness are always our main priority in any renovation,
                   backed by our lengthy warranty.
                 </Typography>
               </CardContent>
