@@ -76,8 +76,7 @@ function Contact() {
     <Container
       id="contact"
       sx={{
-        marginTop: "8rem",
-        marginBottom: "3rem",
+         margin: "5rem 0",
       }}
     >
       <Box

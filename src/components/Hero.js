@@ -1,15 +1,18 @@
 import { Box, Button, Typography } from "@mui/material";
+import Navbar from "./Navbar/Navbar";
 
 const styles = {
   root: {
     minHeight: "100vh",
+    
   },
   hero: {
     minHeight: "100vh",
     backgroundImage: `url("/images/main.jpg")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    textAlign:"center"
+    textAlign: "center",
+    display:"block"
   },
   textContainer: {
     backgroundColor: "rgba(0,0,0,0.5)",
@@ -34,6 +37,7 @@ const styles = {
 export default function Hero() {
   return (
     <Box id="main" sx={styles.root}>
+      <Navbar />
       <Box width="100%">
         <Box sx={styles.hero} role="img" aria-label="kitchen reonvations" >
           <Box sx={styles.textContainer}>
@@ -48,7 +52,7 @@ export default function Hero() {
               <Typography variant="body1" fontSize="5vmin" sx={styles.textWhite}>
                 is our main priority
               </Typography>
-              <Button variant="contained" sx={styles.button} href="#about">
+              <Button variant="contained" sx={styles.button} href="/about">
                 Learn More
               </Button>
             </Box>

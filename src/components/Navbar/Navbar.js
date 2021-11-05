@@ -1,10 +1,11 @@
+import { useHistory } from "react-router-dom";
 import { AppBar, Toolbar } from "@mui/material";
-import WhatsAppFab from "./WhatsAppFab";
 import Brandname from "./Brandname";
 import NavLinks from "./NavLinks";
-import PhoneFab from "./PhoneFab";
+import SocialLinks from "./SocialLinks";
 
 export default function Navbar() {
+  const location = useHistory().location;
 
   return (
     <AppBar
@@ -24,8 +25,7 @@ export default function Navbar() {
       >
         <Brandname />
         <NavLinks />
-        <PhoneFab />
-        <WhatsAppFab />
+        <SocialLinks />
       </Toolbar>
     </AppBar>
   );

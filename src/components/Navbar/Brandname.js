@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 export default function Brandname() {
   return (
     <Box sx={{ flexGrow: 1, p:0 }}>
-      <Button href="#main" sx={{p:0}}>
+      <Button href="/" sx={{p:0}}>
         <img
           src={"/images/srl-white.ico"}
           alt="logo"
