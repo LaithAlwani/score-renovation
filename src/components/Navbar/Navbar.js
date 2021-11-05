@@ -1,11 +1,9 @@
-import { useHistory } from "react-router-dom";
 import { AppBar, Toolbar } from "@mui/material";
 import Brandname from "./Brandname";
 import NavLinks from "./NavLinks";
 import SocialLinks from "./SocialLinks";
 
 export default function Navbar() {
-  const location = useHistory().location;
 
   return (
     <AppBar

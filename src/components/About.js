@@ -12,7 +12,7 @@ export default function About() {
       }}
     >
       <Container>
-        <Title text="ABOUT US" icon={<InfoIcon fontSize="large" />} />
+        <Title text="ABOUT" icon={<InfoIcon fontSize="large" />} />
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
             <Card sx={{ width: "100%", height: 475 }}>

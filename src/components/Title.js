@@ -1,5 +1,4 @@
 import { Divider, Typography } from "@mui/material";
-import React from "react";
 
 export default function Title({ text, icon, color }) {
   return (
