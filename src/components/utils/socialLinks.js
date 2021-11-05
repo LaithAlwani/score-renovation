@@ -5,32 +5,19 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 const links = [
   {
-    icon: <WhatsAppIcon sx={{ color: "white" }} />,
-    name: "WhatsApp",
-    path: "https://wa.me/+16139817682",
-
-    styles: {
-      backgroundColor: "green",
-      "&:hover": { backgroundColor: "darkgreen" },
-      "&:active": { backgroundColor: "darkgreen" },
-    },
-  },
-  { icon: <CallIcon />, name: "Call Us", path: "tel:6139817682" },
-  {
     icon: <InstagramIcon />,
     name: "Instagram",
     path: "https://www.instagram.com/scorerenovation/",
     styles: {
       background: `radial-gradient(
-                    circle at 30% 107%,
-                    #fdf497 0%,
-                    #fdf497 5%,
-                    #fd5949 45%,
-                    #d6249f 60%,
-                    #285aeb 90%
+                circle at 30% 107%,
+                #fdf497 0%,
+                #fdf497 5%,
+                #fd5949 45%,
+                #d6249f 60%,
+                #285aeb 90%
                 )`,
       color: "white",
-      borderRadius: "50%",
     },
   },
   {
@@ -41,6 +28,18 @@ const links = [
       backgroundColor: "rgb(66, 103, 178)",
       "&:hover": { backgroundColor: "#3b5998" },
       "&:active": { backgroundColor: "#3b5998" },
+    },
+  },
+  { icon: <CallIcon />, name: "Call Us", path: "tel:6139817682" },
+  {
+    icon: <WhatsAppIcon sx={{ color: "white" }} />,
+    name: "WhatsApp",
+    path: "https://wa.me/+16139817682",
+
+    styles: {
+      backgroundColor: "green",
+      "&:hover": { backgroundColor: "darkgreen" },
+      "&:active": { backgroundColor: "darkgreen" },
     },
   },
 ];
