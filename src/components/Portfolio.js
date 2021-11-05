@@ -4,7 +4,7 @@ import Title from "./Title";
 
 export default function Portfolio() {
   return (
-    <Box sx={{ backgroundColor: "#444444", padding: "5rem 0" }}>
+    <Box sx={{ backgroundColor: "#444444", padding: "5rem 0", marginBottom:"3rem" }}>
       <Container>
         <Title
           text="GALLERY"

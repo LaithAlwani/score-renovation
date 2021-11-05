@@ -13,13 +13,13 @@ export default function SocialLinks() {
         bottom: 16,
         right: 16,
         display: "flex",
-        flexDirection: "column",
-        "& > *": { m: 0.35 },
+        flexDirection: "column"
       }}
     >
       {links.map((link) => (
         <Fab
           key={link.name}
+          aria-label={link.name}
           size="small"
           tooltipTitle={link.name}
           onClick={() => handleClick(link.path)}

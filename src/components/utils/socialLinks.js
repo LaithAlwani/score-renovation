@@ -18,6 +18,7 @@ const links = [
                 #285aeb 90%
                 )`,
       color: "white",
+      marginBottom:"0.35rem"
     },
   },
   {
@@ -28,6 +29,7 @@ const links = [
       backgroundColor: "rgb(66, 103, 178)",
       "&:hover": { backgroundColor: "#3b5998" },
       "&:active": { backgroundColor: "#3b5998" },
+      marginBottom:"0.25rem"
     },
   },
   { icon: <CallIcon />, name: "Call Us", path: "tel:6139817682" },
@@ -40,6 +42,7 @@ const links = [
       backgroundColor: "green",
       "&:hover": { backgroundColor: "darkgreen" },
       "&:active": { backgroundColor: "darkgreen" },
+      marginTop:"0.35rem"
     },
   },
 ];

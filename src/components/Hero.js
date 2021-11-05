@@ -4,7 +4,6 @@ import Navbar from "./Navbar/Navbar";
 const styles = {
   root: {
     minHeight: "100vh",
-    
   },
   hero: {
     minHeight: "100vh",
@@ -12,7 +11,7 @@ const styles = {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     textAlign: "center",
-    display:"block"
+    
   },
   textContainer: {
     backgroundColor: "rgba(0,0,0,0.5)",
@@ -52,7 +51,7 @@ export default function Hero() {
               <Typography variant="body1" fontSize="5vmin" sx={styles.textWhite}>
                 is our main priority
               </Typography>
-              <Button variant="contained" sx={styles.button} href="/about">
+              <Button variant="contained" sx={styles.button} href="/about-us">
                 Learn More
               </Button>
             </Box>

@@ -4,18 +4,22 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Layout from "./components/Layout";
+import PageError from "./components/PageError";
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Hero} />
-        <Layout>
-          <Route path="/aboutus" component={About} />
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={Hero} />
+          <Route path="/about-us" component={About} />
           <Route path="/gallery" component={Portfolio} />
           <Route path="/contact" component={Contact} />
-        </Layout>
-      </Switch>
+          <Route path="*">
+            <PageError />
+          </Route>
+        </Switch>
+      </Layout>
     </Router>
   );
 }

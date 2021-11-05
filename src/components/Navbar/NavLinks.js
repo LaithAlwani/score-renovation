@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 export default function NavLinks() {
   return (
     <>
-      <Button  color="inherit" href="/aboutus">
+      <Button  color="inherit" href="/about-us">
         About
       </Button>
       <Button color="inherit" href="/gallery">
