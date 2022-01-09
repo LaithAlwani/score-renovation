@@ -10,8 +10,8 @@ export default function SocialLinks() {
       sx={{
         flexGrow: 1,
         position: "fixed",
-        bottom: 16,
-        right: 16,
+        bottom: 10,
+        right: 3,
         display: "flex",
         flexDirection: "column"
       }}

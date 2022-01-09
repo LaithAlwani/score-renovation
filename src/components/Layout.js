@@ -4,6 +4,10 @@ import Footer from "./Footer";
 import Navbar from "./Navbar/Navbar";
 
 const styles = {
+  hero: {
+    minHeight: "100vh",
+    marginBottom: "-35px",
+  },
   root: {
     minHeight: "100vh",
     marginBottom: "-35px",
@@ -11,11 +15,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     
-  },
-  hero: {
-    minHeight: "100vh",
-    marginBottom: "-35px",
-  },
+  }
 };
 
 export default function Layout({ children }) {
@@ -24,7 +24,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <Box sx={location.pathname === "/"? styles.hero : styles.root}>{children}</Box>
+      <Box sx={location.pathname === "/"? styles.hero :styles.root}>{children}</Box>
       <Footer />
     </>
   );

@@ -6,12 +6,10 @@ const styles = {
     minHeight: "100vh",
   },
   hero: {
-    minHeight: "100vh",
     backgroundImage: `url("/images/main.jpg")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    textAlign: "center",
-    
+    textAlign:"center"
   },
   textContainer: {
     backgroundColor: "rgba(0,0,0,0.5)",
