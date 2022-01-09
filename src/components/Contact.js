@@ -73,7 +73,7 @@ function Contact() {
   useEffect(() => {});
 
   return (
-    
+    <Container>
       <Box
         component="form"
         sx={{
@@ -83,7 +83,9 @@ function Contact() {
         autoComplete="off"
         onSubmit={handleSubmit}
       >
-        <Title><ContactSupportIcon fontSize="large" /> CONTACT US</Title>
+        <Title>
+          <ContactSupportIcon fontSize="large" /> CONTACT US
+        </Title>
 
         {error && <Alert severity="error">{error}</Alert>}
         {success && <Alert severity="success">{success}</Alert>}
@@ -150,6 +152,7 @@ function Contact() {
           Submit
         </Button>
       </Box>
+    </Container>
   );
 }
 
