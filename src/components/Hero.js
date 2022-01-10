@@ -1,5 +1,4 @@
 import { Box, Button, Typography } from "@mui/material";
-import Navbar from "./Navbar/Navbar";
 
 const styles = {
   root: {
@@ -33,8 +32,7 @@ const styles = {
 
 export default function Hero() {
   return (
-    <Box id="main" sx={styles.root}>
-      <Navbar />
+    <Box sx={styles.root}>
       <Box width="100%">
         <Box sx={styles.hero} role="img" aria-label="kitchen reonvations" >
           <Box sx={styles.textContainer}>
@@ -56,7 +54,6 @@ export default function Hero() {
           </Box>
         </Box>
       </Box>
-      <div id="about"></div>
     </Box>
   );
 }

@@ -1,5 +1,5 @@
 import { Box, Fab } from "@mui/material";
-import links from "../utils/socialLinks";
+import links from "../../utils/socialLinks";
 
 export default function SocialLinks() {
   const handleClick = (path) => {

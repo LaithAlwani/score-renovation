@@ -1,6 +1,4 @@
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { Card, CardContent, CardMedia, Container, Grid } from "@mui/material";
+import { Card, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 import Title from "./Title";
 
