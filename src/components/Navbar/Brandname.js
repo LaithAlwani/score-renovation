@@ -11,7 +11,7 @@ export default function Brandname() {
         />
       </Button>
       <Typography
-        variant="subtitle2"
+        variant="subtitle2`"
         sx={{ whiteSpace: "nowrap", position: "absolute", bottom: 0 }}
       >
         Score Renovations
