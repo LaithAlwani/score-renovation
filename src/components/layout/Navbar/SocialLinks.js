@@ -1,5 +1,5 @@
 import { Box, Fab } from "@mui/material";
-import links from "../../utils/socialLinks";
+import links from "../../../utils/socialLinks";
 
 export default function SocialLinks() {
   const handleClick = (path) => {
@@ -21,7 +21,6 @@ export default function SocialLinks() {
           key={link.name}
           aria-label={link.name}
           size="small"
-          tooltipTitle={link.name}
           onClick={() => handleClick(link.path)}
           sx={link.styles}
         >

@@ -1,17 +1,17 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
-import Hero from "./components/Hero";
-import Layout from "./components/Layout";
-import PageError from "./components/PageError";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
+import PageError from "./pages/PageError";
+import Home from "./pages/Home";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
     <Router>
       <Layout>
         <Switch>
-          <Route exact path="/" component={Hero} />
+          <Route exact path="/" component={Home} />
           <Route path="/about-us" component={About} />
           <Route path="/gallery" component={Portfolio} />
           <Route path="/contact" component={Contact} />

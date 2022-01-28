@@ -8,7 +8,7 @@ import {
   TextField,
 } from "@mui/material";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
-import Title from "./Title";
+import Title from "../components/Title";
 import emailjs from "emailjs-com";
 
 function Contact() {

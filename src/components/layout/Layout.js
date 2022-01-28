@@ -20,7 +20,6 @@ const styles = {
 
 export default function Layout({ children }) {
   const location = useLocation();
-  console.log(location)
   return (
     <>
       <Navbar />

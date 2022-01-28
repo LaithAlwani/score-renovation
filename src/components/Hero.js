@@ -8,13 +8,15 @@ const styles = {
     backgroundImage: `url("/images/main.jpg")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    textAlign:"center"
+    textAlign: "center",
   },
   textContainer: {
     backgroundColor: "rgba(0,0,0,0.5)",
-    height: "100vh",
     display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
     alignItems: "center",
+    height: "100vh",
   },
   textWhite: {
     fontWeight: "bold",
@@ -33,25 +35,17 @@ const styles = {
 export default function Hero() {
   return (
     <Box sx={styles.root}>
-      <Box width="100%">
-        <Box sx={styles.hero} role="img" aria-label="kitchen reonvations" >
-          <Box sx={styles.textContainer}>
-            <Box
-              sx={{
-                width: "100%",
-              }}
-            >
-              <Typography variant="h1" fontSize="7vmin" sx={styles.textWhite}>
-                Quality renovations
-              </Typography>
-              <Typography variant="body1" fontSize="5vmin" sx={styles.textWhite}>
-                is our main priority
-              </Typography>
-              <Button variant="contained" sx={styles.button} href="/about-us">
-                Learn More
-              </Button>
-            </Box>
-          </Box>
+      <Box sx={styles.hero} role="img" aria-label="kitchen reonvations">
+        <Box sx={styles.textContainer}>
+          <Typography variant="h1" fontSize="9vmin" sx={styles.textWhite}>
+            Quality renovations
+          </Typography>
+          <Typography variant="body1" fontSize="7vmin" sx={styles.textWhite}>
+            is our main priority
+          </Typography>
+          <Button variant="contained" sx={styles.button} href="/about-us">
+            about us
+          </Button>
         </Box>
       </Box>
     </Box>
