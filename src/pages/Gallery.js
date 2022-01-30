@@ -2,9 +2,11 @@ import { Container, Grid } from "@mui/material";
 import PermMediaIcon from "@mui/icons-material/PermMedia";
 import Title from "../components/Title";
 import images from "../utils/images";
-import "../components/portfolio.css";
+import "../components/Gallery.css";
+import { useDocumentTitle } from "../utils/setDocumentTitle";
 
-export default function Portfolio() {
+export default function Gallery() {
+  const [documentTitle] = useDocumentTitle("Gallery");
   return (
     <Container className="container">
       <Title>

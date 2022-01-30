@@ -3,8 +3,10 @@ import InfoIcon from "@mui/icons-material/Info";
 import Title from "../components/Title";
 import AboutCard from "../components/AboutCard";
 import aboutInfo from "../utils/aboutInfo";
+import { useDocumentTitle } from "../utils/setDocumentTitle";
 
 export default function About() {
+  const [documentTitle] = useDocumentTitle("About");
   return (
     <Container sx={{ paddingTop: "6rem", paddingBottom: "3rem" }}>
       <Title>

@@ -1,9 +1,11 @@
 import { Container } from '@mui/material'
 import { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
+import { useDocumentTitle } from '../utils/setDocumentTitle'
 
 export default function PageError() {
     const history = useHistory()
+    const [documentTitle] = useDocumentTitle("404 Page")
     useEffect(() => {
         setTimeout(() => {
             history.goBack();

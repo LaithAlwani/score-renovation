@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
+import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import PageError from "./pages/PageError";
 import Home from "./pages/Home";
@@ -13,7 +13,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about-us" component={About} />
-          <Route path="/gallery" component={Portfolio} />
+          <Route path="/gallery" component={Gallery} />
           <Route path="/contact" component={Contact} />
           <Route path="*">
             <PageError />

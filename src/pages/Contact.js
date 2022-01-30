@@ -10,8 +10,10 @@ import {
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import Title from "../components/Title";
 import emailjs from "emailjs-com";
+import { useDocumentTitle } from "../utils/setDocumentTitle";
 
 function Contact() {
+  const [documentTitle] = useDocumentTitle("Contact");
   const [nameError, setNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [subjectError, setSubjectError] = useState(false);
